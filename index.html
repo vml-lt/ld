@@ -3,53 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Lietuvos draudimas – LDV UNIO, UAB | TPVCA, KASKO, Turto draudimas</title>
-<meta name="description" content="LDV UNIO, UAB – oficialus Lietuvos draudimas partneris. TPVCA, KASKO, turto draudimas. Konsultacijos, žalos atlyginimas. Tel. +370 527 00105.">
-<meta name="keywords" content="Lietuvos draudimas, TPVCA, KASKO, turto draudimas, LDV UNIO, draudimas Vilnius">
-<meta property="og:title" content="LDV UNIO – Lietuvos draudimas partneris">
-<meta property="og:description" content="TPVCA, KASKO ir turto draudimo paslaugos. Kreipkitės į mus!">
+<title>Lietuvos draudimas – informacija ir konsultacijos | LDV UNIO</title>
+<meta name="description" content="Informacinis portalas apie Lietuvos draudimas: TPVCA, KASKO, turto draudimas. Sužinokite apie draudimo produktus, žalos atlyginimą ir Jūsų teises.">
+<meta name="keywords" content="Lietuvos draudimas, TPVCA, KASKO, turto draudimas, draudimas Lietuva, draudimo konsultacija">
+<meta property="og:title" content="Lietuvos draudimas – informacinis portalas | LDV UNIO">
+<meta property="og:description" content="Sužinokite apie TPVCA, KASKO ir turto draudimą Lietuvoje. Nepriklausoma informacija ir konsultacijos.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"ProfessionalService",
-      "name":"LDV UNIO, UAB",
-      "description":"Oficialus Lietuvos draudimas partneris – TPVCA, KASKO, turto draudimas.",
-      "telephone":"+37052700105",
-      "email":"info@ldvunio.lt",
-      "address":{
-        "@type":"PostalAddress",
-        "streetAddress":"Kaštonų g. 29",
-        "addressLocality":"Avižieniai",
-        "postalCode":"LT-14185",
-        "addressCountry":"LT"
-      }
-    },
-    {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {
-          "@type":"Question",
-          "name":"Kas yra TPVCA?",
-          "acceptedAnswer":{"@type":"Answer","text":"TPVCA – transporto priemonių valdytojų civilinės atsakomybės privalomasis draudimas. Kiekvienas motorinės transporto priemonės valdytojas Lietuvoje privalo turėti galiojančią TPVCA polisą."}
-        },
-        {
-          "@type":"Question",
-          "name":"Kuo KASKO skiriasi nuo TPVCA?",
-          "acceptedAnswer":{"@type":"Answer","text":"TPVCA yra privalomasis draudimas, dengiантis žalą tretiesiems asmenims. KASKO yra savanoriškas draudimas, apsaugantis jūsų paties transporto priemonę nuo avarijos, vagystės ar kitų žalų."}
-        },
-        {
-          "@type":"Question",
-          "name":"Per kiek laiko bus atlyginta žala?",
-          "acceptedAnswer":{"@type":"Answer","text":"Pagal Lietuvos Respublikos teisės aktus, draudikas privalo priimti sprendimą dėl draudiminės išmokos per 30 kalendorinių dienų nuo visų reikalingų dokumentų pateikimo."}
-        }
-      ]
-    }
-  ]
-}
+{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","name":"LDV UNIO, UAB","description":"Draudimo informacinis ir konsultacinis portalas Lietuvoje.","telephone":"+37052700105","email":"info@ldvunio.lt","address":{"@type":"PostalAddress","streetAddress":"Kaštonų g. 29","addressLocality":"Avižieniai","postalCode":"LT-14185","addressCountry":"LT"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kas yra TPVCA?","acceptedAnswer":{"@type":"Answer","text":"TPVCA – transporto priemonių valdytojų civilinės atsakomybės privalomasis draudimas. Privalomas visiems motorinių transporto priemonių valdytojams Lietuvoje."}},{"@type":"Question","name":"Kuo KASKO skiriasi nuo TPVCA?","acceptedAnswer":{"@type":"Answer","text":"TPVCA yra privalomasis draudimas, dengiантis žalą tretiesiems asmenims. KASKO – savanoriškas draudimas, apsaugantis jūsų paties transporto priemonę."}},{"@type":"Question","name":"Per kiek laiko atlyginama žala?","acceptedAnswer":{"@type":"Answer","text":"Pagal teisės aktus, draudikas sprendimą dėl išmokos privalo priimti per 30 kalendorinių dienų nuo visų dokumentų pateikimo."}}]}]}
 </script>
 </head>
 <body>
@@ -58,131 +20,151 @@
 <!-- ═══ HEADER ═══ -->
 <header>
   <div class="header-inner">
-    <a class="logo" href="#" onclick="navTo('pradzia');return false;">
-      <span class="logo-ld">LD</span><span class="logo-sep"> | </span><span class="logo-unio">LDV UNIO</span>
-    </a>
-    <button class="burger" id="burger" aria-label="Atidaryti meniu" aria-expanded="false">
+    <span class="logo">LDV UNIO</span>
+    <button class="burger" id="burger" aria-label="Atidaryti meniu" aria-expanded="false" aria-controls="nav-list">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-list" id="nav-list" role="list">
-      <li><a href="#" data-section="pradzia"   onclick="navTo('pradzia');return false;">Pradžia</a></li>
-      <li><a href="#" data-section="apie"      onclick="navTo('apie');return false;">Apie mus</a></li>
-      <li><a href="#" data-section="tpvca"     onclick="navTo('tpvca');return false;">TPVCA</a></li>
-      <li><a href="#" data-section="kasko"     onclick="navTo('kasko');return false;">KASKO</a></li>
-      <li><a href="#" data-section="turtas"    onclick="navTo('turtas');return false;">Turtas</a></li>
-      <li><a href="#" data-section="skaiciuokle" onclick="navTo('skaiciuokle');return false;">Skaičiuoklė</a></li>
-      <li><a href="#" data-section="zala"      onclick="navTo('zala');return false;">Žalos atlyg.</a></li>
-      <li><a href="#" data-section="duk"       onclick="navTo('duk');return false;">D.U.K.</a></li>
-      <li><a href="#" data-section="kontaktai" onclick="navTo('kontaktai');return false;">Kontaktai</a></li>
+      <li><span role="button" tabindex="0" data-section="pradzia"     onclick="navTo('pradzia')">Pradžia</span></li>
+      <li><span role="button" tabindex="0" data-section="apie"        onclick="navTo('apie')">Apie LD</span></li>
+      <li><span role="button" tabindex="0" data-section="tpvca"       onclick="navTo('tpvca')">TPVCA</span></li>
+      <li><span role="button" tabindex="0" data-section="kasko"       onclick="navTo('kasko')">KASKO</span></li>
+      <li><span role="button" tabindex="0" data-section="turtas"      onclick="navTo('turtas')">Turtas</span></li>
+      <li><span role="button" tabindex="0" data-section="skaiciuokle" onclick="navTo('skaiciuokle')">Skaičiuoklė</span></li>
+      <li><span role="button" tabindex="0" data-section="zala"        onclick="navTo('zala')">Žalos atlyg.</span></li>
+      <li><span role="button" tabindex="0" data-section="duk"         onclick="navTo('duk')">D.U.K.</span></li>
+      <li><span role="button" tabindex="0" data-section="kontaktai"   onclick="navTo('kontaktai')">Kontaktai</span></li>
     </ul>
   </div>
 </header>
 
 <!-- ═══ HERO ═══ -->
-<section id="pradzia" class="hero">
+<section id="pradzia">
   <div class="hero-inner">
-    <p class="hero-sub">Oficialus Lietuvos draudimas partneris</p>
-    <h1>Patikimas draudimas<br>jums ir jūsų turtui</h1>
-    <p class="hero-desc">TPVCA, KASKO, turto ir kitas draudimas – profesionali konsultacija ir greitas žalos atlyginimas.</p>
+    <p class="hero-eyebrow">Draudimo informacinis portalas</p>
+    <h1>Viskas apie<br>Lietuvos draudimą</h1>
+    <p class="hero-desc">TPVCA, KASKO, turto draudimas – aiški ir nešališka informacija apie draudimo produktus, jūsų teises ir žalos atlyginimą Lietuvoje.</p>
     <div class="hero-btns">
-      <button class="btn btn-hero-primary" onclick="navTo('skaiciuokle')">Skaičiuoti kainą</button>
-      <button class="btn btn-hero-outline" onclick="navTo('kontaktai')">Susisiekti</button>
+      <span class="btn btn-primary" role="button" tabindex="0" onclick="navTo('skaiciuokle')" style="cursor:pointer;">Skaičiuoklė</span>
+      <span class="btn btn-outline" role="button" tabindex="0" onclick="navTo('duk')" style="cursor:pointer;">D.U.K.</span>
     </div>
   </div>
 </section>
 
-<!-- ═══ APIE MUS ═══ -->
-<section id="apie" class="section">
+<!-- ═══ APIE LIETUVOS DRAUDIMAS ═══ -->
+<section id="apie" class="section section-alt">
   <div class="container">
-    <h2 class="section-title">Apie mus</h2>
+    <h2 class="section-title">Kas yra Lietuvos draudimas?</h2>
+    <div class="trumpai-box">
+      <strong>Trumpai:</strong> Lietuvos draudimas (LD) – viena iš didžiausių draudimo bendrovių Baltijos šalyse, priklausanti tarptautinei „Gjensidige" grupei. Teikia tiek privačių asmenų, tiek verslo draudimo paslaugas.
+    </div>
     <p class="section-intro">
-      <strong>LDV UNIO, UAB</strong> – oficialus <strong>Lietuvos draudimas</strong> partneris, teikiantis draudimo paslaugas privatiems ir juridiniams asmenims. Mūsų komanda – patyrusios draudimo specialistai, pasiruošę padėti išsirinkti tinkamiausią draudimą.
+      <strong>Lietuvos draudimas</strong> – tai universali draudimo bendrovė, veikianti Lietuvoje nuo 1991 metų. Bendrovė siūlo platų draudimo produktų spektrą: privalomąjį transporto draudimą (TPVCA), savanorišką transporto draudimą (KASKO), turto, gyvybės, sveikatos ir kitus draudimo produktus.
     </p>
     <div class="cards-grid">
       <div class="card">
-        <div class="card-icon">&#128274;</div>
-        <h3>Patikimumas</h3>
-        <p>Bendradarbiaujame su Lietuvos draudimas – viena didžiausių ir patikimiausių draudimo kompanijų Baltijos regione.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">&#128172;</div>
-        <h3>Individuali konsultacija</h3>
-        <p>Kiekvienas klientas gauna asmeninę konsultaciją – padedame išsirinkti optimalų draudimo produktą.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">&#9889;</div>
-        <h3>Greitas aptarnavimas</h3>
-        <p>Žalos atlyginimo procesas vykdomas sklandžiai ir operatyviai – jūsų komfortas mums svarbiausias.</p>
+        <div class="card-icon">&#128181;</div>
+        <h3>Draudimo produktai</h3>
+        <p>LD siūlo daugiau kaip 20 skirtingų draudimo produktų – nuo privalomojo TPVCA iki gyvybės draudimo ir verslo rizikų draudimo.</p>
       </div>
       <div class="card">
         <div class="card-icon">&#127758;</div>
-        <h3>Patirtis</h3>
-        <p>Daugelio metų patirtis draudimo sektoriuje garantuoja profesionalų ir atsakingą požiūrį į kiekvieną klientą.</p>
+        <h3>Veikia Baltijos šalyse</h3>
+        <p>Lietuvos draudimas priklauso norvegų „Gjensidige" grupei, veikiančiai daugiau nei 10 šalių. Draudimas galioja visoje Europos Sąjungos teritorijoje.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128202;</div>
+        <h3>Rinkos lyderė</h3>
+        <p>Lietuvos draudimas yra viena iš didžiausių rinkos dalyvių Lietuvoje pagal surinktų draudimo įmokų apimtis ir klientų skaičių.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128272;</div>
+        <h3>Reguliuojama veikla</h3>
+        <p>Draudimo veiklą Lietuvoje prižiūri Lietuvos bankas. Visi draudikai privalo laikytis griežtų mokumo reikalavimų ir kliento apsaugos taisyklių.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ TPVCA ═══ -->
-<section id="tpvca" class="section section-alt">
+<section id="tpvca" class="section">
   <div class="container">
-    <h2 class="section-title">TPVCA draudimas</h2>
+    <h2 class="section-title">TPVCA – privalomasis draudimas</h2>
+    <div class="trumpai-box">
+      <strong>Trumpai:</strong> TPVCA (transporto priemonių valdytojų civilinė atsakomybė) yra <strong>privalomasis</strong> draudimas kiekvienam motorinės transporto priemonės valdytojui Lietuvoje. Be galiojančio poliso – bauda iki 600 €.
+    </div>
     <p class="section-intro">
-      <strong>Transporto priemonių valdytojų civilinės atsakomybės (TPVCA)</strong> draudimas yra privalomasis visų motorinių transporto priemonių valdytojams Lietuvoje. Šis draudimas apsaugo jus nuo finansinės atsakomybės, jei dėl jūsų kaltės eismo įvykyje nukentėtų kiti asmenys ar jų turtas.
+      TPVCA draudimas apsaugo ne jūsų automobilį, o <strong>kitus eismo dalyvius</strong>. Jei dėl jūsų kaltės įvyks eismo įvykis, draudikas atlygina žalą nukentėjusiems – jų sveikatai, turtui ar gyvybei. Draudimas galioja visoje ES.
     </p>
     <div class="info-block">
       <div class="info-col">
         <h3>Ką dengia TPVCA?</h3>
         <ul class="check-list">
-          <li>Žalą, padarytą kitų asmenų sveikatai</li>
-          <li>Žalą, padarytą kitų asmenų turtui</li>
-          <li>Išlaidas gydymui ir reabilitacijai</li>
-          <li>Neturtinę žalą (nuostoliai dėl skausmo ir kt.)</li>
-          <li>Teisines išlaidas, susijusias su žalos atlyginimu</li>
+          <li>Žalą kitų asmenų sveikatai ir gyvybei</li>
+          <li>Žalą kitų asmenų turtui (automobiliams, tvoroms ir pan.)</li>
+          <li>Išlaidas gydymui, reabilitacijai, slaugai</li>
+          <li>Neturtinę žalą (skausmas, kančia)</li>
+          <li>Prarastą darbingumą ir pajamas</li>
+          <li>Laidojimo išlaidas (mirtino įvykio atveju)</li>
         </ul>
       </div>
       <div class="info-col">
-        <h3>Svarbu žinoti</h3>
+        <h3>Ko NEDENGIA TPVCA?</h3>
         <ul class="check-list">
-          <li>Privalomas kiekvienai transporto priemonei</li>
-          <li>Galioja visoje ES teritorijoje</li>
-          <li>Kaina priklauso nuo žalos istorijos (bonus-malus)</li>
-          <li>Galima sudaryti 1–12 mėnesių polisą</li>
-          <li>Draudžiant internetu – papildoma nuolaida</li>
+          <li>Jūsų paties automobilio žalos</li>
+          <li>Žalos, padarytos tyčia</li>
+          <li>Žalos, atsiradusios neblaiviam vairuojant</li>
+          <li>Žalos, atsiradusios nevairuojant (vagystė, krušos žala)</li>
         </ul>
+        <h3 style="margin-top:20px">Bonus-Malus sistema</h3>
+        <p style="font-size:.93rem">TPVCA kaina priklauso nuo jūsų žalos istorijos. Kiekvieni metai be žalos – nuolaida (bonus). Padarius žalą – priemoka (malus). Sistema veikia nuo 0,5 iki 2,5 koeficiento.</p>
       </div>
     </div>
+    <div class="tbl-wrap">
+      <table>
+        <caption style="text-align:left;font-weight:700;margin-bottom:8px;color:var(--clr-brand2)">TPVCA draudimo viršutinės atlyginimo ribos (2024)</caption>
+        <thead><tr><th>Žalos rūšis</th><th>Maksimali suma (vienas įvykis)</th></tr></thead>
+        <tbody>
+          <tr><td>Žala sveikatai ir gyvybei</td><td>5 000 000 EUR</td></tr>
+          <tr><td>Žala turtui</td><td>1 000 000 EUR</td></tr>
+        </tbody>
+      </table>
+    </div>
     <div class="cta-row">
-      <button class="btn btn-primary" onclick="navTo('skaiciuokle')">Skaičiuoti TPVCA kainą</button>
-      <button class="btn btn-outline" onclick="navTo('kontaktai')">Gauti konsultaciją</button>
+      <span class="btn btn-primary" role="button" tabindex="0" onclick="navTo('skaiciuokle')" style="cursor:pointer;">Apskaičiuoti TPVCA kainą</span>
+      <span class="btn btn-outline" role="button" tabindex="0" onclick="navTo('duk')" style="cursor:pointer;">Dažni klausimai</span>
     </div>
   </div>
 </section>
 
 <!-- ═══ KASKO ═══ -->
-<section id="kasko" class="section">
+<section id="kasko" class="section section-alt">
   <div class="container">
-    <h2 class="section-title">KASKO draudimas</h2>
+    <h2 class="section-title">KASKO – savanoriškas transporto draudimas</h2>
+    <div class="trumpai-box">
+      <strong>Trumpai:</strong> KASKO yra savanoriškas jūsų automobilio draudimas. Skirtingai nei TPVCA, KASKO apsaugo <strong>jūsų paties transporto priemonę</strong> nuo įvairių žalų – avarijos, vagystės, stichinių nelaimių.
+    </div>
     <p class="section-intro">
-      <strong>KASKO</strong> – savanoriškas transporto priemonės draudimas, apsaugantis jūsų automobilį nuo fizinių žalų, vagystės, stichinių nelaimių ir kitų rizikų. Pasirinkite pilną arba dalinį KASKO pagal savo poreikius ir biudžetą.
+      KASKO polisą verta apsvarstyti, jei automobilio vertė didelė, automobilį pirkote lizingu (kredito davėjai dažnai reikalauja KASKO), ar tiesiog norite ramybės, kad bet kokios žalos bus atlyginta.
     </p>
     <div class="cards-grid cards-grid-2">
-      <div class="card card-highlight">
-        <div class="card-badge">Rekomenduojama</div>
+      <div class="card">
+        <div class="card-badge">Pilna apsauga</div>
         <h3>Pilnas KASKO</h3>
         <ul class="check-list">
-          <li>Eismo įvykių žalos atlyginimas</li>
-          <li>Vagystė ir vandalizmas</li>
-          <li>Stichinės nelaimės (liūtis, kruša, vėjas)</li>
+          <li>Eismo įvykio žala (nepriklausomai nuo kaltės)</li>
+          <li>Vagystė ir dalių grobstymas</li>
+          <li>Vandalizmas, tyčinis sugadinimas</li>
+          <li>Stichinės nelaimės (kruša, potvynis, vėjas)</li>
           <li>Gaisras ir sprogimas</li>
           <li>Susidūrimas su gyvūnais</li>
-          <li>Stiklo dužimas</li>
-          <li>Pakaitinis automobilis</li>
+          <li>Stiklo dužimas (be franšizės)</li>
+          <li>Papildomai: pakaitinis automobilis</li>
         </ul>
-        <button class="btn btn-primary" onclick="navTo('skaiciuokle')">Skaičiuoti</button>
       </div>
       <div class="card">
         <h3>Dalinis KASKO</h3>
+        <p style="font-size:.9rem;color:var(--clr-muted);margin-bottom:12px">Dengia pasirinktas rizikas – pigesnis nei pilnas KASKO</p>
         <ul class="check-list">
           <li>Stichinės nelaimės</li>
           <li>Gaisras ir sprogimas</li>
@@ -190,55 +172,63 @@
           <li>Susidūrimas su gyvūnais</li>
           <li>Stiklo dužimas</li>
         </ul>
-        <button class="btn btn-outline" onclick="navTo('skaiciuokle')">Skaičiuoti</button>
+        <p style="font-size:.86rem;color:var(--clr-muted);margin-top:8px">⚠ Eismo įvykio žala <strong>nedengiama</strong></p>
       </div>
+    </div>
+    <h3 style="margin-top:32px">Franšizė – kaip ji veikia?</h3>
+    <p>Franšizė – tai suma, kurią mokate patys, kai atsitinka žala. Pavyzdžiui, su 300 € franšize: jei žala 800 €, draudikas moka 500 €, jūs – 300 €. Didesnė franšizė = mažesnė poliso kaina.</p>
+    <div class="cta-row">
+      <span class="btn btn-primary" role="button" tabindex="0" onclick="navTo('skaiciuokle')" style="cursor:pointer;">Skaičiuoti KASKO kainą</span>
     </div>
   </div>
 </section>
 
 <!-- ═══ TURTAS ═══ -->
-<section id="turtas" class="section section-alt">
+<section id="turtas" class="section">
   <div class="container">
     <h2 class="section-title">Turto draudimas</h2>
     <p class="section-intro">
-      Apsaugokite savo namus, butą ar verslą nuo netikėtų nelaimių. <strong>Turto draudimas</strong> atlygina žalą, atsiradusią dėl gaisro, potvynio, vagystės ir kitų rizikų.
+      Turto draudimas apsaugo jūsų nekilnojamąjį turtą (namus, butą, sodybą) ir jame esantį kilnojamąjį turtą nuo netikėtų įvykių. Draudimas gali padengti gaisro, potvynio, vagystės, stichinių nelaimių ir kitą žalą.
     </p>
     <div class="cards-grid">
       <div class="card">
         <div class="card-icon">&#127968;</div>
-        <h3>Namų draudimas</h3>
-        <p>Gyvenamojo namo ir jame esančio turto draudimas nuo gaisro, potvynio, vagystės, stichinių nelaimių ir kitų žalų.</p>
+        <h3>Namo draudimas</h3>
+        <p>Draudžiamas pastato konstrukcinis elementai, stogas, langai, inžineriniai tinklai. Papildomai – kilnojamasis turtas ir civilinė atsakomybė kaimynams.</p>
+        <p style="font-size:.85rem;color:var(--clr-muted)">Dengiama: gaisras, potvynis, sprogimas, vagystė, vandalai, kruša, vėjas, žaibas ir kt.</p>
       </div>
       <div class="card">
         <div class="card-icon">&#127970;</div>
         <h3>Buto draudimas</h3>
-        <p>Buto ir jame esančio kilnojamojo turto apsauga. Papildomai galima drausti civilinę atsakomybę kaimynams.</p>
+        <p>Draudžiamas butas – apdaila, baldai, buitinė technika, vertingos asmeninės daiktai. Svarbi civilinės atsakomybės kaimynams dalis.</p>
+        <p style="font-size:.85rem;color:var(--clr-muted)">Ypač aktualu: gaisro, vamzdžių prasivėrimo, vagystės atvejai daugiabučiuose.</p>
       </div>
       <div class="card">
         <div class="card-icon">&#127981;</div>
-        <h3>Verslo turtas</h3>
-        <p>Komercinių patalpų, įrengimų, prekių atsargų ir kito verslo turto draudimas. Individualios sąlygos verslui.</p>
+        <h3>Verslo turto draudimas</h3>
+        <p>Komercinės patalpos, gamybos įrengimai, prekių atsargos, kompiuterinė įranga. Galima drausti ir verslo nutraukimo riziką (pelno praradimą).</p>
+        <p style="font-size:.85rem;color:var(--clr-muted)">Sąlygos derinamos individualiai pagal verslo specifiką.</p>
       </div>
     </div>
-    <div class="cta-row">
-      <button class="btn btn-primary" onclick="navTo('kontaktai')">Gauti pasiūlymą</button>
+    <div class="alert-box">
+      <strong>&#128161; Draudimo suma</strong> – turto draudimo pagrindinė sąvoka. Ji turi atitikti realią turto vertę atstatymo kaina (ne rinkos kainą). Nepakankamai apdraudus (underinsurance), žalos atlyginimas sumažinamas proporcingai.
     </div>
   </div>
 </section>
 
 <!-- ═══ SKAIČIUOKLĖ ═══ -->
-<section id="skaiciuokle" class="section">
+<section id="skaiciuokle" class="section section-alt">
   <div class="container">
-    <h2 class="section-title">Draudimo skaičiuoklė</h2>
-    <p class="section-intro">Apskaičiuokite orientacinę jūsų draudimo kainą. Tikslų pasiūlymą pateiks mūsų konsultantas.</p>
+    <h2 class="section-title">Draudimo įmokų skaičiuoklė</h2>
+    <p class="section-intro">Apskaičiuokite orientacinę metinę draudimo įmoką pagal pagrindinius parametrus. Tikslų pasiūlymą teikia draudimo bendrovė.</p>
     <div class="calc-wrap">
       <form class="calc-form" id="calc-form">
         <div class="calc-field">
           <label for="calc-val">Transporto priemonės vertė (€)</label>
-          <input type="text" id="calc-val" placeholder="pvz. 15000" inputmode="numeric" autocomplete="off" required>
+          <input type="text" id="calc-val" placeholder="pvz. 15 000" inputmode="numeric" autocomplete="off" required>
         </div>
         <div class="calc-field">
-          <label for="calc-age">Vairuotojo amžius (metai)</label>
+          <label for="calc-age">Vairuotojo amžius</label>
           <input type="number" id="calc-age" placeholder="pvz. 35" min="16" max="99" value="35">
         </div>
         <div class="calc-field">
@@ -262,94 +252,106 @@
 </section>
 
 <!-- ═══ ŽALOS ATLYGINIMAS ═══ -->
-<section id="zala" class="section section-alt">
+<section id="zala" class="section">
   <div class="container">
-    <h2 class="section-title">Žalos atlyginimas</h2>
+    <h2 class="section-title">Žalos atlyginimo procesas</h2>
     <p class="section-intro">
-      Įvykus draudiminiam įvykiui, svarbu laiku ir teisingai pranešti draudikui. LDV UNIO konsultantai padės jums atlikti visus reikiamus veiksmus sklandžiai ir greitai.
+      Žala turi būti pranešta kuo greičiau po įvykio. Draudikas privalo priimti sprendimą <strong>per 30 kalendorinių dienų</strong> nuo visų reikalingų dokumentų gavimo. Pažinkite savo teises.
     </p>
     <div class="steps-grid">
       <div class="step">
         <div class="step-num">1</div>
-        <h3>Pranešite apie įvykį</h3>
-        <p>Kuo greičiau praneškite mums arba tiesiogiai Lietuvos draudimas apie įvykusį draudiminį įvykį.</p>
+        <h3>Įvykio fiksavimas</h3>
+        <p>Eismo įvykio atveju – iššaukite policiją arba užpildykite europinį pranešimą (jei nėra sužeistųjų ir abi pusės sutaria). Fotografuokite vietą ir žalas.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h3>Pateikite dokumentus</h3>
-        <p>Surinkkite ir pateikite visus reikalingus dokumentus: įvykio aktą, nuotraukas, teisėsaugos ar pagalbos tarnybų pažymas.</p>
+        <h3>Pranešimas draudikui</h3>
+        <p>Pranešite apie įvykį draudikui per sutartyje nurodytą terminą (dažniausiai 3–5 darbo dienos). Vėluojant galima netekti dalies išmokos.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h3>Žalos įvertinimas</h3>
-        <p>Draudiko ekspertas įvertins žalą ir priims sprendimą dėl draudiminės išmokos per nustatytus terminus.</p>
+        <h3>Dokumentų pateikimas</h3>
+        <p>Pateikite: poliso kopiją, TP techninę apžiūrą, vairuotojo pažymėjimą, eismo įvykio dokumentus, sąskaitą už remontą ar žalos įvertinimą.</p>
       </div>
       <div class="step">
         <div class="step-num">4</div>
-        <h3>Išmoka</h3>
-        <p>Patvirtinus žalą, draudiminė išmoka bus pervesta į jūsų banko sąskaitą arba sumokėta remonto metu.</p>
+        <h3>Sprendimas ir išmoka</h3>
+        <p>Draudikas privalo priimti sprendimą per 30 dienų. Nesutinkate su sprendimu? Kreipkitės į Lietuvos banką arba teismą.</p>
+      </div>
+    </div>
+    <div class="info-block" style="margin-top:0">
+      <div class="info-col">
+        <h3>Europinis pranešimas – kada naudoti?</h3>
+        <ul class="check-list">
+          <li>Susidūrė du automobiliai</li>
+          <li>Nėra sužeistų asmenų</li>
+          <li>Abu vairuotojai sutaria dėl aplinkybių</li>
+          <li>Abu turi galiojantį TPVCA polisą</li>
+        </ul>
+        <p style="font-size:.86rem;color:var(--clr-muted)">Formuliarą galima atsisiųsti iš <a href="https://www.ldb.lt" target="_blank" rel="noopener">ldb.lt</a></p>
+      </div>
+      <div class="info-col">
+        <h3>Jūsų teisės žalos atveju</h3>
+        <ul class="check-list">
+          <li>Gauti raštišką draudiko sprendimą su motyvais</li>
+          <li>Pateikti skundą Lietuvos bankui nemokamai</li>
+          <li>Reikalauti delspinigių už pavėluotą išmoką</li>
+          <li>Kreiptis į teismą dėl ginčijamos sumos</li>
+        </ul>
       </div>
     </div>
     <div class="alert-box">
-      <strong>&#9888; Svarbu!</strong> Eismo įvykio atveju pirmiausia įsitikinkite, ar visi dalyviai saugūs. Iškvieskite pagalbą (112), jei reikia. Nesijudinkite iš įvykio vietos iki atvyks policija arba neužpildžius europinio pranešimo.
+      <strong>&#9888; Eismo įvykio metu:</strong> Pirmiausia įsitikinkite, ar visi dalyviai saugūs. Jei yra sužeistų – iš karto kvieskite pagalbą (112). Nejudinkite automobilių iš vietos iki atvyks policija, nebent jie kelia pavojų eismui.
     </div>
   </div>
 </section>
 
 <!-- ═══ D.U.K. ═══ -->
-<section id="duk" class="section">
+<section id="duk" class="section section-alt">
   <div class="container">
     <h2 class="section-title">Dažniausiai užduodami klausimai</h2>
-    <div class="faq-list">
 
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Kas yra TPVCA ir ar jis privalomas?</button>
-        <div class="faq-a">
-          <p>TPVCA (transporto priemonių valdytojų civilinė atsakomybė) yra privalomasis draudimas Lietuvoje. Kiekvienas motorinės transporto priemonės valdytojas privalo turėti galiojantį TPVCA polisą. Be jo negalima registruoti transporto priemonės ir juo naudotis viešuosiuose keliuose.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Kuo KASKO skiriasi nuo TPVCA?</button>
-        <div class="faq-a">
-          <p>TPVCA – privalomasis draudimas, atlygina žalą nukentėjusiesiems tretiesiems asmenims (ne jūsų automobilį). KASKO – savanoriškas draudimas, apsaugantis jūsų paties transporto priemonę nuo žalų, vagystės, stichinių nelaimių ir pan. Abi draudimo rūšis rekomenduojama turėti kartu.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Kiek laiko užtrunka žalos atlyginimas?</button>
-        <div class="faq-a">
-          <p>Pagal Lietuvos Respublikos teisės aktus, draudikas privalo priimti sprendimą dėl draudiminės išmokos per <strong>30 kalendorinių dienų</strong> nuo visų reikalingų dokumentų pateikimo. Praktikoje, kai žala paprasta ir dokumentai pateikti laiku, sprendimas priimamas greičiau.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Ar galiu drausti turtą nepateikdamas jo apžiūrai?</button>
-        <div class="faq-a">
-          <p>Daugeliu atvejų turto apžiūra nereikalinga standartiniams draudimo produktams (buto, namų draudimas). Tačiau aukštos vertės turtui ar komerciniam turtui gali būti reikalaujama apžiūros. Susisiekite su mumis ir mes patarime, kokie dokumentai reikalingi jūsų atveju.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Kaip apskaičiuojama TPVCA poliso kaina?</button>
-        <div class="faq-a">
-          <p>TPVCA kaina priklauso nuo kelių veiksnių: transporto priemonės rūšies, variklio galios, valdytojo amžiaus ir žalos istorijos (bonus-malus sistema). Ilgai draudę be žalų – gaunate nuolaidą. Naudokitės mūsų skaičiuokle, kad gautumėte orientacinę kainą.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Ar galiu sudaryti draudimo sutartį internetu?</button>
-        <div class="faq-a">
-          <p>Taip, TPVCA polisą galima sudaryti internetu per Lietuvos draudimas svetainę <a href="https://www.ld.lt" target="_blank" rel="noopener">ld.lt</a>. Tačiau sudėtingesniems produktams (KASKO, turto draudimui) rekomenduojame susisiekti su mūsų konsultantu, kad gautumėte individualų pasiūlymą.</p>
-        </div>
-      </div>
-
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Ar TPVCA privalomas visiems automobiliams, net nevažinėjamiems?</button>
+      <div class="faq-a"><p>Taip, TPVCA privalomas visoms registruotoms motorinėms transporto priemonėms, nepriklausomai nuo to, ar jomis naudojamasi. Išimtis – transporto priemonė oficialiai išregistruota arba jos valstybinis numeris perduotas. Nevažinėjamas automobilis turi turėti bent minimalų TPVCA polisą, kol yra registruotas.</p></div>
     </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Kas nutinka, jei kitas vairuotojas (kaltas) neturi TPVCA?</button>
+      <div class="faq-a"><p>Jei jus kaltais laikytinas vairuotojas neturi TPVCA, žalą atlygina <strong>Lietuvos draudikų biuras (LDB)</strong> per Lietuvos draudikų garantinį fondą. Kreipkitės į ldb.lt arba bet kurią draudimo bendrovę, veikiančią Lietuvoje. Jūs neprarandate teisės į žalos atlyginimą.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Ar verta rinktis KASKO su didelę franšize?</button>
+      <div class="faq-a"><p>Tai priklauso nuo jūsų automobilio vertės ir finansinės situacijos. Didesnė franšizė (pvz., 500–1000 €) gerokai sumažina metinę įmoką. Tai protinga strategija, jei: automobilis nėra labai naujas, galite padengti mažesnes žalas patys ir norite apsisaugoti tik nuo didelių nuostolių (vagystė, didelė avarija).</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Kaip sužinoti savo bonus-malus koeficientą?</button>
+      <div class="faq-a"><p>Bonus-malus koeficientas yra nurodomas TPVCA polise. Taip pat galite jo paklausti savo draudimo bendrovės arba patikrinti per <strong>tpvca.lt</strong> portalą. Koeficientas priklauso nuo to, kiek metų draudėtės be žalų ir kiek žalų padarėte per pastaruosius 5 metus.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Kuo skiriasi turto draudimo atstatymo vertė nuo rinkos vertės?</button>
+      <div class="faq-a"><p><strong>Atstatymo vertė</strong> – kiek kainuotų atstatyti turtą tokios pačios kokybės nauju (naudojama pastatams). <strong>Rinkos vertė</strong> – kiek turtas verstų šiandien parduodant (įvertinamas susidėvėjimas). Draudimui rekomenduojama naudoti atstatymo vertę, nes ji užtikrina, kad žalos atveju galėsite faktiškai atstatyti turtą.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Ar galima drausti automobilį ne savo vardu?</button>
+      <div class="faq-a"><p>TPVCA polisas sudaromas <strong>transporto priemonės valdytojo</strong>, ne savininko vardu. Valdytojas – tas, kas faktiškai naudoja automobilį (pvz., ilgalaikio lizingo gavėjas). KASKO paprastai sudaromas savininko arba lizingo bendrovės vardu. Jei vairuojate ne savo automobilį – patikrinkite, ar jus apima savininko polisas.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Ar draudimas veikia užsienyje?</button>
+      <div class="faq-a"><p>TPVCA automatiškai galioja visose <strong>Žaliojo kortelės</strong> sistemoje dalyvaujančiose šalyse (visa ES, ir daugelis ne ES šalių – Turkija, Ukraina, Marokas ir kt.). Žalioji kortelė – tai tarptautinis TPVCA sertifikatas, kurį išduoda draudikas. KASKO paprastai galioja tik šalyse, nurodytose polise – patikrinkite sąlygas prieš kelionę.</p></div>
+    </div>
+
   </div>
 </section>
 
 <!-- ═══ KONTAKTAI ═══ -->
-<section id="kontaktai" class="section section-alt">
+<section id="kontaktai" class="section">
   <div class="container">
     <h2 class="section-title">Kontaktai</h2>
     <div class="contact-grid">
@@ -380,13 +382,14 @@
         <div class="contact-hours">
           <h4>Darbo laikas</h4>
           <p>Pirmad.–Penkt.: 9:00–18:00</p>
-          <p>Šešt.–Sekm.: Nedirbame</p>
+          <p>Šeštadienis–Sekmadienis: Nedirbame</p>
         </div>
+        <p class="contact-note">Šis portalas yra informacinio pobūdžio. Draudimo sutartis sudaro licencijuotos draudimo bendrovės. Informacija atnaujinama pagal galiojančius Lietuvos Respublikos teisės aktus.</p>
       </div>
-      <div class="contact-map">
+      <div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.5!2d25.08!3d54.77!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKa%C5%A1ton%C5%B3+g.+29%2C+Avi%C5%BEieniai!5e0!3m2!1slt!2slt!4v1700000000000!5m2!1slt!2slt"
-          width="100%" height="350" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy"
+          width="100%" height="360" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade" title="LDV UNIO biuro vieta">
         </iframe>
       </div>
@@ -397,13 +400,13 @@
 <!-- ═══ NUORODOS ═══ -->
 <div id="nuorodos" class="nuorodos-section">
   <div class="container">
-    <h3>Naudingos nuorodos</h3>
+    <h3>Oficialūs šaltiniai ir naudingos nuorodos</h3>
     <ul class="nuorodos-list">
-      <li><a href="https://www.lb.lt" target="_blank" rel="noopener">Lietuvos bankas (lb.lt)</a></li>
+      <li><a href="https://www.lb.lt" target="_blank" rel="noopener">Lietuvos bankas – draudikų priežiūra</a></li>
       <li><a href="https://www.ld.lt" target="_blank" rel="noopener">Lietuvos draudimas (ld.lt)</a></li>
-      <li><a href="https://www.tpvca.lt" target="_blank" rel="noopener">TPVCA informacija (tpvca.lt)</a></li>
-      <li><a href="https://www.ldb.lt" target="_blank" rel="noopener">Lietuvos draudikų biuras (ldb.lt)</a></li>
-      <li><a href="https://www.vkti.gov.lt" target="_blank" rel="noopener">VKTI (vkti.gov.lt)</a></li>
+      <li><a href="https://www.tpvca.lt" target="_blank" rel="noopener">TPVCA polisų patikrinimas</a></li>
+      <li><a href="https://www.ldb.lt" target="_blank" rel="noopener">Lietuvos draudikų biuras</a></li>
+      <li><a href="https://www.vkti.gov.lt" target="_blank" rel="noopener">VKTI – valstybinė kelių inspekcija</a></li>
     </ul>
   </div>
 </div>
@@ -411,9 +414,9 @@
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="container footer-inner">
-    <p class="footer-copy">&copy; <span id="yr"></span> LDV UNIO, UAB. Visos teisės saugomos.</p>
-    <p class="footer-legal">Įmonės kodas: 124547694 &nbsp;|&nbsp; PVM: LT245476917 &nbsp;|&nbsp; Kaštonų g. 29, Avižieniai, LT-14185 Vilniaus r. sav.</p>
-    <p class="footer-disclaimer">Svetainė yra informacinio pobūdžio. LDV UNIO, UAB yra oficialus Lietuvos draudimas partneris.</p>
+    <p class="footer-copy">&copy; <span id="yr"></span> LDV UNIO, UAB</p>
+    <p class="footer-legal">Įmonės kodas: 124547694 &nbsp;|&nbsp; PVM: LT245476917 &nbsp;|&nbsp; Kaštonų g. 29, Avižieniai, LT-14185</p>
+    <p class="footer-disclaimer">Šis portalas yra informacinio ir konsultacinio pobūdžio. Pateikiama informacija nėra draudimo sutartis ar pasiūlymas sudaryti sutartį. Draudimo sutartis sudaro tik licencijuotos draudimo bendrovės.</p>
   </div>
 </footer>
 

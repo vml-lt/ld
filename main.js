@@ -1,4 +1,3 @@
-/* LDV UNIO – main.js */
 'use strict';
 
 /* ── Email obfuscation ── */
@@ -8,13 +7,12 @@ document.querySelectorAll('[data-u][data-d]').forEach(function(el){
   el.textContent = addr;
 });
 
-/* ── Smooth-scroll nav ── */
+/* ── Smooth-scroll ── */
 function navTo(id){
   var wrap = document.getElementById('page-wrap');
   var target = document.getElementById(id);
   if(!wrap || !target) return;
   wrap.scrollTo({ top: target.offsetTop - 64, behavior: 'smooth' });
-  /* close burger on mobile */
   document.getElementById('nav-list').classList.remove('open');
   document.getElementById('burger').setAttribute('aria-expanded','false');
 }
@@ -29,10 +27,10 @@ if(burger && navList){
   });
 }
 
-/* ── Keyboard: Enter on nav links ── */
-document.querySelectorAll('[onclick]').forEach(function(el){
+/* ── Keyboard: Enter/Space on span[role=button] ── */
+document.querySelectorAll('span[role="button"]').forEach(function(el){
   el.addEventListener('keydown', function(e){
-    if(e.key === 'Enter') el.click();
+    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); el.click(); }
   });
 });
 
@@ -42,7 +40,6 @@ document.querySelectorAll('.faq-item').forEach(function(item){
   if(!q) return;
   q.addEventListener('click', function(){
     var isOpen = item.classList.contains('open');
-    /* close all */
     document.querySelectorAll('.faq-item.open').forEach(function(o){ o.classList.remove('open'); });
     if(!isOpen) item.classList.add('open');
   });
@@ -54,18 +51,14 @@ document.querySelectorAll('.faq-item').forEach(function(item){
 /* ── Active nav highlight on scroll ── */
 (function(){
   var wrap = document.getElementById('page-wrap');
-  var sections = Array.from(document.querySelectorAll('section[id], div[id="nuorodos"]'));
-  var links = Array.from(document.querySelectorAll('#nav-list a[data-section]'));
+  var sections = Array.from(document.querySelectorAll('section[id]'));
+  var links = Array.from(document.querySelectorAll('#nav-list span[data-section]'));
   if(!wrap) return;
   wrap.addEventListener('scroll', function(){
     var scrollY = wrap.scrollTop + 80;
     var current = '';
-    sections.forEach(function(sec){
-      if(sec.offsetTop <= scrollY) current = sec.id;
-    });
-    links.forEach(function(a){
-      a.classList.toggle('active', a.dataset.section === current);
-    });
+    sections.forEach(function(sec){ if(sec.offsetTop <= scrollY) current = sec.id; });
+    links.forEach(function(s){ s.classList.toggle('active', s.dataset.section === current); });
   });
 })();
 
@@ -75,52 +68,38 @@ document.querySelectorAll('.faq-item').forEach(function(item){
   var result = document.getElementById('calc-result');
   if(!form || !result) return;
 
-  function parseNum(str){
-    return parseFloat(String(str).replace(/\s/g,'').replace(',','.')) || 0;
-  }
-
-  function ageFactor(age){
-    if(age < 25) return 1.5;
-    if(age > 65) return 1.2;
-    return 1.0;
-  }
-
-  function fmt(n){ return Math.round(n).toLocaleString('lt-LT') + ' €'; }
+  function parseNum(s){ return parseFloat(String(s).replace(/\s/g,'').replace(',','.')) || 0; }
+  function ageFactor(a){ return a < 25 ? 1.5 : a > 65 ? 1.2 : 1.0; }
+  function fmt(n){ return Math.round(n).toLocaleString('lt-LT') + '\u00a0€'; }
 
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var val  = parseNum(document.getElementById('calc-val').value);
     var age  = parseInt(document.getElementById('calc-age').value, 10) || 35;
     var type = document.getElementById('calc-type').value;
-
     if(val <= 0){
       result.innerHTML = '<p class="cr-warn">Įveskite teisingą transporto priemonės vertę.</p>';
       return;
     }
-
-    var rateMin, rateMax, label;
+    var rMin, rMax, label;
     if(type === 'tpvca'){
-      rateMin = 0.008; rateMax = 0.015; label = 'TPVCA (privalomasis)';
+      rMin = 0.008; rMax = 0.015; label = 'TPVCA (privalomasis)';
     } else if(type === 'kasko-full'){
-      rateMin = 0.025; rateMax = 0.045; label = 'KASKO (pilnas)';
+      rMin = 0.025; rMax = 0.045; label = 'KASKO – pilnas';
     } else {
-      rateMin = 0.015; rateMax = 0.025; label = 'KASKO (dalinis)';
+      rMin = 0.015; rMax = 0.025; label = 'KASKO – dalinis';
     }
-
     var af = ageFactor(age);
-    var low  = val * rateMin * af;
-    var high = val * rateMax * af;
-    var afLabel = af === 1.5 ? 'Jaunas vairuotojas (×1,5)' : af === 1.2 ? 'Vyresnio amžiaus (×1,2)' : 'Standartinis (×1,0)';
-
+    var low = val * rMin * af, high = val * rMax * af;
+    var afLabel = af === 1.5 ? 'Jaunas vair. (×1,5)' : af === 1.2 ? 'Vyresnio amžiaus (×1,2)' : 'Standartinis (×1,0)';
     result.innerHTML =
       '<table class="cr-table">' +
         '<tr><th>TP vertė</th><td>' + fmt(val) + '</td></tr>' +
         '<tr><th>Draudimo rūšis</th><td>' + label + '</td></tr>' +
         '<tr><th>Amžiaus koef.</th><td>' + afLabel + '</td></tr>' +
-        '<tr class="cr-total"><th>Orientacinė metinė kaina</th><td>' + fmt(low) + ' – ' + fmt(high) + '</td></tr>' +
+        '<tr class="cr-total"><th>Orientacinė metinė įmoka</th><td>' + fmt(low) + ' – ' + fmt(high) + '</td></tr>' +
       '</table>' +
-      '<p class="cr-note">* Ši skaičiuoklė pateikia orientacinę kainą. Tikslų draudimo įmoką gaukite susisiekę su mūsų konsultantu.</p>';
+      '<p class="cr-note">* Ši skaičiuoklė pateikia orientacinę kainą. Tiksli draudimo įmoka priklauso nuo papildomų veiksnių ir yra nustatoma individualiai.</p>';
   });
-
-  form.addEventListener('reset', function(){ result.innerHTML = ''; });
+  form.addEventListener('reset', function(){ result.innerHTML = '<p class="calc-placeholder">&#8592; Užpildykite formą ir spauskite „Skaičiuoti"</p>'; });
 })();
